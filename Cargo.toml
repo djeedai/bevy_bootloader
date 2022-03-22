@@ -1,0 +1,25 @@
+[package]
+name = "bevy_bootloader"
+version = "0.1.0"
+authors = ["Jerome Humbert <djeedai@gmail.com>"]
+edition = "2021"
+description = "App startup and resource management plugin for the Bevy game engine"
+repository = "https://github.com/djeedai/bevy_bootloader"
+homepage = "https://github.com/djeedai/bevy_bootloader"
+documentation = "https://docs.rs/bevy_bootloader"
+keywords = ["bevy", "boot", "bootloader", "resources"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+exclude = ["examples/*.gif", ".github"]
+
+[dependencies]
+bevy = { version = "0.6", default-features = false, features = ["bevy_sprite", "bevy_render", "bevy_core_pipeline"] }
+parking_lot = "0.12"
+
+[dev-dependencies]
+bevy-inspector-egui = "0.8"
+anyhow = "1.0"
+
+[[example]]
+name = "bootloader"
+required-features = [ "bevy/bevy_winit" ]
